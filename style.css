@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Feelin;
+    
+}
+
+body {
+    background-color: #f4f4f4;
+    
+}
+
+/* Header Styles */
+.header {
+    background-image: linear-gradient(to right, #272626, black);
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: relative; /* Adicionado para posicionamento do botão hambúrguer */
+}
+
+.logo {
+    text-align: center;
+    background-color: #ecc309;
+    color: #272626;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-right: 0;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 30px;
+    font-family: Backso;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    font-size: 16px;
+    font-family: Backso;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.header-content nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-content-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo para o botão hambúrguer e menu mobile */
+.menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.hamburger-btn {
+    display: none; /* Por padrão o botão fica escondido */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Categories */
+.nav-categories {
+    background-image: linear-gradient(to right, #272626);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 5%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@font-face {
+    font-family: 'Feelin';
+    src: url('./src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
+}
+
+/*Aqui vc coloca a interligação da fonte ao seu site*/
+@font-face {   
+    font-family: 'Backso'; 
+    src: url('./src/fonts/Backso.otf') format('opentype'), url('./src/fonts/Backso.ttf') format('truetype'); 
+}
+
+.nav-categories a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: Backso;   
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-categories a:hover {
+    opacity: 1;
+    color: #ecc309; /*cor do link quando o mouse passa por cima.*/
+    transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
+}
+
+.nav-categories a::after {
+    content: '';/**/
+    position: absolute; /**/
+    bottom: -5px; /**/
+    left: 0; /**/
+    width: 0; /**/
+    height: 2px; /**/
+    background-color: #ecc309; /*cor do sublinhado*/
+    transition: width 0.3s; /*animacao suave do sublinhado (velocidade com que ele aparece)*/
+}
+
+.nav-categories a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    background-image: linear-gradient(to right, #272626, #000);
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 5%;
+    align-items: center;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.content-text p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.content-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-illustration img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 80px;
+}
+
+/* Course Categories */
+.course-categories {
+    background-image: linear-gradient(to right, #272626, #000);
+    width: 100%;
+}
+
+.category-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.course-categories h2 {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-links a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ecc309;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-links a:hover {
+    background-color: #272626;
+    color: #FFFFFF;
+}
+
+/* Gradient Divider */
+.gradient-divider {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ecc309, #f55f08);
+    margin: 0;
+    padding: 0;
+}
+
+/* Updated Footer Styles */
+footer {
+    background-image: linear-gradient(to right, #272626, #000);
+    color: white;
+    padding: 60px 0 30px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #8C97AD;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    color: #B0B8C5;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    background-color: #ecc309;
+    color: #272626;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #2980B9;
+}
+
+.country-selector select {
+    width: 100%;
+    background-color: #172645;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.footer-links {
+    margin-top: 20px;
+    color: #8C97AD;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #8C97AD;
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #B0B8C5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ecc309;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f55f08;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #8C97AD;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #8C97AD;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ecc309;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Reestiliza o nav-categories para modo mobile */
+    .nav-categories {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #272626, black);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 70px;
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+    
+    .nav-categories a {
+        margin: 15px 25px;
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Quando o checkbox está marcado, mostra o menu */
+    .menu-toggle:checked ~ .nav-categories {
+        right: 0;
+    }
+    
+    /* Animação das linhas do hambúrguer quando ativo */
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        margin-left: 15px;
+        z-index: 80;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-illustration {
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .header-nav, .header-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
