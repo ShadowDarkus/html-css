@@ -200,21 +200,26 @@ body {
 
 /*Referente ao botao de "entre em contato"*/
 .cta-button {
-    display: inline-block; /**/
-    background-color: #272626; /*cor de fundo do botao*/
-    color: #ecc309; /*texto dentro do botao*/
+    display: inline-block;
+    background-color: #ffffff;
+    color: #272626;
     margin-bottom: 30px;
-    padding: 12px 30px; /*preenchimento de altura e largura do botao*/
-    text-decoration: none; /*limpa o link do botao, retirando o sublinhado e cor padrao*/
-    border-radius: 30px; /*borda curva do botao*/
-    font-weight: bold; /*engrossamento do texto do botao*/
-    transition: transform 0.3s, box-shadow 0.3s; /*animacao suave + sombra atras do boato*/
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Adicionar posição relativa */
 }
 
 /*Referente ao hover do botao*/
 .cta-button:hover {
-    transform: translateY(-3px); /*faz com que o botao suba um pouco quando o mouse passa por cima*/
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /*cria a sombra do botao*/
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 189, 3, 0.1);
+    color: #ecc309;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #ecc309; /* Corrigido: vírgulas removidas */
 }
 
 .content-illustration {
@@ -556,6 +561,7 @@ footer {
 
     .content-illustration img {
         width: 100%;
+        margin-left: -20px;
     }
 
     .header-nav, .header-actions {
