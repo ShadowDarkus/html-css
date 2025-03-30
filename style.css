@@ -210,6 +210,7 @@ body {
     font-weight: bold;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative; /* Adicionar posição relativa */
+    border: 1px solid #ecc309; /* Corrigido: vírgulas removidas */
 }
 
 /*Referente ao hover do botao*/
@@ -219,7 +220,6 @@ body {
     color: #ecc309;
     background-color: #000;
     transition: background-color 0.3s, color 0.3s;
-    border: 1px solid #ecc309; /* Corrigido: vírgulas removidas */
 }
 
 .content-illustration {
