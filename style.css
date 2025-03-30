@@ -539,6 +539,10 @@ footer {
         z-index: 80;
     }
 
+    .name {
+        font-size: 1.5rem;
+    }
+
     .main-container {
         flex-direction: column;
         text-align: center;
@@ -548,6 +552,10 @@ footer {
         justify-content: center;
         margin-top: 30px;
         margin-left: 100px;
+    }
+
+    .content-illustration img {
+        width: 100%;
     }
 
     .header-nav, .header-actions {
