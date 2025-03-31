@@ -398,6 +398,26 @@ footer {
     margin-bottom: 20px;
 }
 
+.fa-square-facebook {
+    color: rgb(13, 72, 236);
+}
+
+.fa-instagram {
+    color: rgb(164, 11, 211);
+}
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-square-x-twitter {
+    color: #fff;
+}
+
+.fa-square-whatsapp {
+    color: green;
+}
+
 .newsletter-form input {
     width: 100%;
     background-color: #fff;
