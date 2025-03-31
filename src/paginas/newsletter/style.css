@@ -265,11 +265,15 @@ main {
         max-width: 100%;
     }
 
+    .card-content {
+        padding-left: 0.8rem;
+    }
+
     .step-label {
         font-size: 0.75rem;
     }
     
-    .card-header, .card-content {
+    .card-header{
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
