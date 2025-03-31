@@ -393,29 +393,39 @@ footer {
 }
 
 .footer-column p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #B0B8C5;
     margin-bottom: 20px;
 }
 
 .fa-square-facebook {
     color: rgb(13, 72, 236);
+    font-size: 20px;
 }
 
 .fa-instagram {
     color: rgb(164, 11, 211);
+    font-size: 20px;
+}
+
+.fa-tiktok {
+    color: #fff;
+    font-size: 20px;
 }
 
 .fa-youtube {
     color: red;
+    font-size: 20px;
 }
 
 .fa-square-x-twitter {
     color: #fff;
+    font-size: 20px;
 }
 
 .fa-square-whatsapp {
     color: green;
+    font-size: 20px;
 }
 
 .newsletter-form input {
@@ -479,8 +489,14 @@ footer {
 .footer-column ul li a {
     color: #B0B8C5;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
 
 .footer-column ul li a:hover {
@@ -495,7 +511,7 @@ footer {
 
 .footer-bottom p {
     color: #8C97AD;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
