@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - My Website</title> <!--Esse é o título da página.-->
+    <title>Contato-My Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <a href="/html-css/index.html">Início</a> |
-        <!--Usei URL's relativas aqui, pois os arquivos das paginas estão dentro da mesma pasta, não foi necessário usar URL absolutas.-->
-        <a href="../Novidades/index.html">Novidades</a> |
-        <a href="../Portifolio/index.html">Portifólios</a> |
-        <a href="../Sobre/index.html">Sobre</a> |
-        <a href="./index.html">Contato</a> |
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="name">Yago Padrão</div>
+                <div class="tagline">Developer Web</div>
+            </div>
+
+            <!-- Botão hamburguer e checkbox para controle do menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+
+            <nav class="nav-categories">
+                <a href="/html-css/index.html">INÍCIO</a>
+                <a href="./src/paginas/Novidades/index.html">NOVIDADES</a>
+                <a href="./src/paginas/Sobre/index.html">SOBRE</a>
+                <a href="./src/paginas/Portifolio/index.html">PORTIFÓLIO</a>
+                <a href="./src/paginas/Contato/index.html">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Fale Conosco</h1>
+                    <p class="hero-subtitle">Tem alguma dúvida ou sugestão? Entre em contato conosco! Nossa equipe
+                        está pronta para atendê-lo.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="form-card">
+                <h2 class="form-title">Envie sua Mensagem</h2>
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder=" " required>
+                            <label for="name" class="form-label">Nome Completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder=" " required>
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" placeholder=" ">
+                            <label for="phone" class="form-label">Telefone</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder=" " required>
+                            <label for="subject" class="form-label">Assunto</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control form-textarea" id="message" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Mensagem</label>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Empresa Moderna. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
