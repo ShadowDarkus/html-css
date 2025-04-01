@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato-My Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -26,10 +29,10 @@
 
             <nav class="nav-categories">
                 <a href="/html-css/index.html">INÍCIO</a>
-                <a href="./src/paginas/Novidades/index.html">NOVIDADES</a>
-                <a href="./src/paginas/Sobre/index.html">SOBRE</a>
-                <a href="./src/paginas/Portifolio/index.html">PORTIFÓLIO</a>
-                <a href="./src/paginas/Contato/index.html">CONTATO</a>
+                <a href="../Novidades/index.html">NOVIDADES</a>
+                <a href="../Sobre/index.html">SOBRE</a>
+                <a href="../Portifolio/index.html">PORTIFÓLIO</a>
+                <a href="./index.html">CONTATO</a>
             </nav>
         </div>
     </header>
@@ -39,7 +42,7 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">Fale Conosco</h1>
-                    <p class="hero-subtitle">Tem alguma dúvida ou sugestão? Entre em contato conosco! Nossa equipe
+                    <p class="hero-p">Tem alguma dúvida ou sugestão? Entre em contato conosco! Nossa equipe
                         está pronta para atendê-lo.</p>
                 </div>
             </div>
@@ -85,9 +88,70 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Empresa Moderna. Todos os direitos reservados.</p>
+    <div class="gradient-divider"></div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Inscreva-se para receber as últimas notícias e recursos úteis diretamente no seu e-mail.
+                        Aguardamos você lá, até mais 😎👍
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Seu nome" required />
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <button type="submit"><a href="/html-css/src/paginas/newsletter/index.html">Inscreva-se</a></button>
+                    </form>
+
+                    <div class="footer-links">
+                        <p>Rio de Janeiro // RJ</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="/html-css/index.html">Início</a></li>
+                        <li><a href="../Novidades/index.html">Novidades</a></li>
+                        <li><a href="../Sobre/index.html">Sobre</a></li>
+                        <li><a href="../Portifolio/index.html">Portifólio</a></li>
+                        <li><a href="./index.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Redes Sociais (modificada) -->
+                <div class="footer-column">
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+                                Tiktok</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i>
+                                Youtube</a></li>
+                        <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i> X</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Entre em Contato (modificada) -->
+                <div class="footer-column">
+                    <h4>Entre em Contato</h4>
+                    <ul>
+                        <li><a href="https://outlook.office.com/mail/" target="_blank">📩 E-mail:
+                                15773899728@veigadealmeida.edu.br</a></li>
+                        <li><a href="https://contate.me/5521979445237" target="_blank"><i
+                                    class="fa-brands fa-square-whatsapp"></i> WhatsApp: +55(21)97944-5237</a></li>
+                        <li><a href="./index.html">Formulário</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Yago Padrão. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 </body>

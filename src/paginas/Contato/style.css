@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary-color: #ff6b6b;
@@ -13,11 +12,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Feelin';
+}
+
+@font-face {
+    font-family: 'Feelin';
+    src: url('/html-css/src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
+}
+
+/*Aqui vc coloca a interligação da fonte ao seu site*/
+@font-face {   
+    font-family: 'Backso'; 
+    src: url('/html-css/src/fonts/Backso.otf') format('opentype'), url('/html-css/src/fonts/Backso.ttf') format('truetype'); 
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-image: linear-gradient(to right, #272626, #000);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -169,14 +179,19 @@ body {
     padding: 2rem 0;
     text-align: center;
     position: relative;
-    overflow: hidden;
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #0c0c0c;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
     backdrop-filter: blur(5px);
@@ -195,7 +210,7 @@ body {
 }
 
 .hero-title {
-    color: var(--dark-color);
+    color: #fff;
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
@@ -207,14 +222,14 @@ body {
     position: absolute;
     width: 50%;
     height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to right, #ecc309, #d63031);
     left: 25%;
     bottom: -10px;
     border-radius: 2px;
 }
 
-.hero-subtitle {
-    color: #666;
+.hero-p {
+    color: #c2bdbd;
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
@@ -228,7 +243,7 @@ body {
 }
 
 .form-card {
-    background: white;
+    background: #0c0c0c;
     border-radius: 15px;
     padding: 2.5rem;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -236,7 +251,7 @@ body {
     transform: translateY(-50px);
     opacity: 0;
     animation: slideUp 0.8s ease-out forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.6s;
 }
 
 @keyframes slideUp {
@@ -249,16 +264,16 @@ body {
 .form-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: var(--dark-color);
+    color: #fff;
     position: relative;
 }
 
 .form-title::after {
     content: '';
     position: absolute;
-    width: 50px;
+    width: 110px;
     height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to right, #ecc309, #f55f08, #f83201);
     left: 0;
     bottom: -10px;
     border-radius: 2px;
@@ -286,17 +301,12 @@ body {
     width: 100%;
     padding: 0.8rem 1rem;
     font-size: 1rem;
-    background-color: var(--light-color);
-    border: 2px solid transparent;
+    background-color: #f9f9f9;
+    border: 1px solid transparent;
     border-radius: 10px;
     transition: all 0.3s;
     outline: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-.form-control:focus {
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(121, 113, 234, 0.1);
+    font-family: Feelin;
 }
 
 .form-label {
@@ -317,7 +327,7 @@ body {
     left: 0.8rem;
     font-size: 0.8rem;
     background-color: white;
-    color: var(--secondary-color);
+    color: #7971ea;
 }
 
 .form-textarea {
@@ -330,8 +340,8 @@ body {
     padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: linear-gradient(45deg, #ff6b6b, #7971ea);
+    color: #272626;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -342,58 +352,281 @@ body {
     z-index: 1;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-    z-index: -1;
-    transition: transform 0.5s;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-.btn:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
 .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(121, 113, 234, 0.6);
 }
 
-.btn:active {
-    transform: translateY(0);
-}
-
 .button-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-.footer {
-    margin-top: auto;
-    padding: 1.5rem 0;
-    background-color: var(--dark-color);
+/* Gradient Divider */
+.gradient-divider {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ecc309, #f55f08);
+    margin: 0;
+    padding: 0;
+}
+
+/* Updated Footer Styles */
+footer {
+    background-image: linear-gradient(to right, #272626, #000);
     color: white;
-    text-align: center;
+    padding: 60px 0 30px;
+    width: 100%;
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5%;
 }
 
-/* Form validation animations */
-.form-control:focus:valid {
-    border-color: var(--success-color);
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
-.form-control:focus:invalid {
-    border-color: var(--error-color);
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-column p {
+    font-size: 1.1rem;
+    color: #B0B8C5;
+    margin-bottom: 20px;
+}
+
+.fa-square-facebook {
+    color: rgb(13, 72, 236);
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: rgb(164, 11, 211);
+    font-size: 20px;
+}
+
+.fa-tiktok {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+
+.fa-square-x-twitter {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-square-whatsapp {
+    color: green;
+    font-size: 20px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    width: 100%;
+    background-color: #ecc309;
+    color: #272626;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button a {
+    text-decoration: none;
+    color: #272626;
+}
+
+.newsletter-form button a:hover {
+    color: #ecc309;
+}
+
+.newsletter-form button:hover {
+    background-color: #000;
+    color:#ecc309;
+    border: 1px solid #ecc309
+}
+
+.footer-links {
+    margin-top: 20px;
+    color: #8C97AD;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #8C97AD;
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #B0B8C5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.footer-column ul li a:hover {
+    color: #ecc309;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f55f08;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #8C97AD;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Reestiliza o nav-categories para modo mobile */
+    .nav-categories {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #272626, black);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 70px;
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+    
+    .nav-categories a {
+        margin: 15px 25px;
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Quando o checkbox está marcado, mostra o menu */
+    .menu-toggle:checked ~ .nav-categories {
+        right: 0;
+    }
+    
+    /* Animação das linhas do hambúrguer quando ativo */
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        margin-left: 15px;
+        z-index: 80;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-illustration {
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .content-illustration img {
+        width: 100%;
+        margin-left: -20px;
+    }
+
+    .header-nav, .header-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
