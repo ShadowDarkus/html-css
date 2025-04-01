@@ -160,21 +160,6 @@ body {
     transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
 }
 
-.nav-categories a::after {
-    content: '';/**/
-    position: absolute; /**/
-    bottom: -5px; /**/
-    left: 0; /**/
-    width: 0; /**/
-    height: 2px; /**/
-    background-color: #ecc309; /*cor do sublinhado*/
-    transition: width 0.3s; /*animacao suave do sublinhado (velocidade com que ele aparece)*/
-}
-
-.nav-categories a:hover::after {
-    width: 100%;
-}
-
 .hero {
     padding: 2rem 0;
     text-align: center;
