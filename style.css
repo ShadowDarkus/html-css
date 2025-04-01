@@ -436,15 +436,6 @@ footer {
     transition: background-color 0.3s;
 }
 
-.newsletter-form button a {
-    text-decoration: none;
-    color: #272626;
-}
-
-.newsletter-form button a:hover {
-    color: #ecc309;
-}
-
 .newsletter-form button:hover {
     background-color: #000;
     color:#ecc309;
