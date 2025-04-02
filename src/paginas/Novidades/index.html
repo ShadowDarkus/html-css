@@ -1,20 +1,267 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novidades - My Website</title> <!--Esse é o título da página.-->
-   <link rel="stylesheet" href="style.css">
+    <title>Agenda de Eventos - 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div>
-        <a href="/html-css/index.html">Início</a> |
-        <!--Usei URL's relativas aqui, pois os arquivos das paginas estão dentro da mesma pasta, não foi necessário usar URL absolutas.-->
-        <a href="../Novidades/index.html">Novidades</a> |
-        <a href="../Portifolio/index.html">Portifólios</a> |
-        <a href="../Sobre/index.html">Sobre</a> |
-        <a href="../Contato/index.html">Contato</a> |
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="name">Yago Padrão</div>
+                <div class="tagline">Developer Web</div>
+            </div>
+
+            <!-- Botão hamburguer e checkbox para controle do menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+
+            <nav class="nav-categories">
+                <a href="/html-css/index.html">INÍCIO</a>
+                <a href="./index.html">NOVIDADES</a>
+                <a href="../Sobre/index.html">SOBRE</a>
+                <a href="../Portifolio/index.html">PORTIFÓLIO</a>
+                <a href="../Contato/index.html">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="title-page">
+        <h1>Minha Agenda 2025</h1>
+        <p class="subtitle">Acompanhe os próximos eventos e planejamentos</p>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="timeline">
+                <div class="month-label">
+                    <h2>Abril 2025</h2>
+                </div>
+
+                <!-- Evento Anime -->
+                <div class="event type-anime visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">04 de Abril</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Estreia de "The Beginning After The End"</h3>
+                            <p class="event-desc">Finalmente chegou o dia! Um dos manhwas mais aguardados pela
+                                comunidade ganha sua adaptação para anime na Crunchyroll. Esta obra fantástica que
+                                acompanho há anos estará disponível para streaming.</p>
+                            <div class="tags">
+                                <span class="tag">Anime</span>
+                                <span class="tag">Manhwa</span>
+                                <span class="tag">Crunchyroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Finanças -->
+                <div class="event type-finance visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">10 de Abril</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Retorno à Bolsa de Valores</h3>
+                            <p class="event-desc">Data marcada para retomar as operações na bolsa de valores! Vou voltar
+                                a analisar gráficos de ações e buscar oportunidades no mercado financeiro.</p>
+                            <p class="event-desc">Pretendo focar em análise técnica e fundamentalista para tomar
+                                decisões mais assertivas.</p>
+                            <div class="tags">
+                                <span class="tag">Investimentos</span>
+                                <span class="tag">Trading</span>
+                                <span class="tag">Análise Gráfica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Educação -->
+                <div class="event type-education visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">Durante Abril</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Cursos de Programação</h3>
+                            <p class="event-desc">Vou investir em cursos extras de programação para expandir meus
+                                conhecimentos em:</p>
+                            <ul class="event-list">
+                                <li>Python (Análise de dados e automação)</li>
+                                <li>PHP (Desenvolvimento web back-end)</li>
+                                <li>JavaScript (Frameworks modernos)</li>
+                                <li>React (Desenvolvimento front-end)</li>
+                                <li>SQL (Banco de dados avançado)</li>
+                            </ul>
+                            <p class="event-desc">Além disso, participarei de webinars gratuitos da Alura sobre
+                                tendências em tecnologia.</p>
+                            <div class="tags">
+                                <span class="tag">Programação</span>
+                                <span class="tag">Webinars</span>
+                                <span class="tag">Alura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Workshop -->
+                <div class="event type-education visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">25 de Abril</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Workshop de UX/UI Design</h3>
+                            <p class="event-desc">Participação confirmada no workshop online de UX/UI Design ministrado
+                                por especialistas da área. Será uma oportunidade para complementar meus conhecimentos em
+                                programação com habilidades de design.</p>
+                            <div class="tags">
+                                <span class="tag">UX/UI</span>
+                                <span class="tag">Design</span>
+                                <span class="tag">Workshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-label">
+                    <h2>Maio 2025</h2>
+                </div>
+
+                <!-- Evento Projetos -->
+                <div class="event type-projects visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">Até 06 de Maio</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Entrega de Projetos de Atividades Complementares</h3>
+                            <p class="event-desc">Data limite para entregar todos os projetos de atividades
+                                complementares do trimestre. Pretendo desenvolver pelo menos 5 projetos para ganhar
+                                certificados de conclusão e adicionar às minhas horas extras.</p>
+                            <p class="event-desc">Projetos planejados:</p>
+                            <ul class="event-list">
+                                <li>Site responsivo com HTML/CSS</li>
+                                <li>Sistema de gerenciamento com Python</li>
+                                <li>API REST com PHP</li>
+                                <li>Aplicativo mobile com React Native</li>
+                                <li>Dashboard de análise de dados</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Projetos</span>
+                                <span class="tag">Certificados</span>
+                                <span class="tag">Horas Complementares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Hackathon -->
+                <div class="event type-education visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">15 de Maio</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Hackathon de Inovação Tecnológica</h3>
+                            <p class="event-desc">Participação no Hackathon online com foco em soluções tecnológicas
+                                sustentáveis. Uma chance de aplicar os conhecimentos adquiridos nos cursos e criar
+                                networking com outros profissionais da área.</p>
+                            <div class="tags">
+                                <span class="tag">Hackathon</span>
+                                <span class="tag">Networking</span>
+                                <span class="tag">Inovação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento Revisão Financeira -->
+                <div class="event type-finance visible">
+                    <div class="event-wrapper">
+                        <div class="event-date">20 de Maio</div>
+                        <div class="event-content">
+                            <h3 class="event-title">Revisão de Estratégia de Investimentos</h3>
+                            <p class="event-desc">Após um mês de operações no mercado, farei uma análise completa do
+                                desempenho e ajustes na estratégia de investimentos para os próximos meses.</p>
+                            <div class="tags">
+                                <span class="tag">Planejamento</span>
+                                <span class="tag">Análise</span>
+                                <span class="tag">Estratégia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Inscreva-se para receber as últimas notícias e recursos úteis diretamente no seu e-mail.
+                        Aguardamos você lá, até mais 😎👍
+                    </p>
+                    <form class="newsletter-form" action="../newsletter/index.html">
+                        <input type="text" placeholder="Seu nome" required />
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <button type="submit">Inscreva-se</button>
+                    </form>
+
+                    <div class="footer-links">
+                        <p>Rio de Janeiro // RJ</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="/html-css/index.html">Início</a></li>
+                        <li><a href="./index.html">Novidades</a></li>
+                        <li><a href="../Sobre/index.html">Sobre</a></li>
+                        <li><a href="../Portifolio/index.html">Portifólio</a></li>
+                        <li><a href="../Contato/index.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Redes Sociais (modificada) -->
+                <div class="footer-column">
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+                                Tiktok</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i>
+                                Youtube</a></li>
+                        <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i> X</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Entre em Contato (modificada) -->
+                <div class="footer-column">
+                    <h4>Entre em Contato</h4>
+                    <ul>
+                        <li><a href="https://outlook.office.com/mail/" target="_blank">📩 E-mail:
+                                15773899728@veigadealmeida.edu.br</a></li>
+                        <li><a href="https://contate.me/5521979445237" target="_blank"><i
+                                    class="fa-brands fa-square-whatsapp"></i> WhatsApp: +55(21)97944-5237</a></li>
+                        <li><a href="../Contato/index.html">Formulário</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Yago Padrão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

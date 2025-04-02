@@ -1,0 +1,723 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Feelin;
+}
+
+@font-face {
+    font-family: 'Feelin';
+    src: url('/html-css/src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
+}
+
+/*Aqui vc coloca a interligação da fonte ao seu site*/
+@font-face {   
+    font-family: 'Backso'; 
+    src: url('/html-css/src/fonts/Backso.otf') format('opentype'), url('/html-css/src/fonts/Backso.ttf') format('truetype'); 
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Animação de fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.1), transparent 50%),
+                 radial-gradient(circle at bottom left, rgba(231, 95, 5, 0.1), transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header Styles */
+.header {
+    background-image: linear-gradient(to right, #272626, black);
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: relative; /* Adicionado para posicionamento do botão hambúrguer */
+}
+
+.logo {
+    text-align: center;
+    background-color: #ecc309;
+    color: #272626;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-right: 0;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 30px;
+    font-family: Backso;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    font-size: 16px;
+    font-family: Backso;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.header-content nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-content-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo para o botão hambúrguer e menu mobile */
+.menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.hamburger-btn {
+    display: none; /* Por padrão o botão fica escondido */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Categories */
+.nav-categories {
+    background-image: linear-gradient(to right, #272626);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 5%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-categories a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: Backso;   
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-categories a:hover {
+    opacity: 1;
+    color: #ecc309; /*cor do link quando o mouse passa por cima.*/
+    transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
+}
+
+.title-page {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #bb86fc, #03dac6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    color: #a0a0a0;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 40px);
+    background: linear-gradient(to bottom, #bb86fc, #03dac6);
+    top: 40px;
+}
+
+.month-label {
+    text-align: center;
+    margin: 3rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.month-label h2 {
+    display: inline-block;
+    background-color: #121212;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    color: #bb86fc;
+    border: 1px solid #bb86fc;
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.event {
+    position: relative;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-out;
+}
+
+/* Evento que aparece na tela ganha animação */
+.event.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+.event-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-date {
+    text-align: right;
+    width: 25%;
+    padding-right: 2rem;
+    color: #a0a0a0;
+    font-weight: 500;
+}
+
+.event:nth-child(even) .event-date {
+    order: 2;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 2rem;
+}
+
+.event-content {
+    width: 50%;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+}
+
+.event-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.event-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.event.type-anime .event-title {
+    color: #cf6679;
+}
+
+.event.type-finance .event-title {
+    color: #81c784;
+}
+
+.event.type-education .event-title {
+    color: #64b5f6;
+}
+
+.event.type-projects .event-title {
+    color: #ffb74d;
+}
+
+.event-desc {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #a0a0a0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.event.type-anime .tag:hover {
+    background-color: #cf6679;
+    color: white;
+}
+
+.event.type-finance .tag:hover {
+    background-color: #81c784;
+    color: white;
+}
+
+.event.type-education .tag:hover {
+    background-color: #64b5f6;
+    color: white;
+}
+
+.event.type-projects .tag:hover {
+    background-color: #ffb74d;
+    color: white;
+}
+
+/* Updated Footer Styles */
+footer {
+    background-image: linear-gradient(to right, #272626, #000);
+    color: white;
+    padding: 60px 0 30px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-column p {
+    font-size: 1.1rem;
+    color: #B0B8C5;
+    margin-bottom: 20px;
+}
+
+.fa-square-facebook {
+    color: rgb(13, 72, 236);
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: rgb(164, 11, 211);
+    font-size: 20px;
+}
+
+.fa-tiktok {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+
+.fa-square-x-twitter {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-square-whatsapp {
+    color: green;
+    font-size: 20px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    width: 100%;
+    background-color: #ecc309;
+    color: #272626;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #000;
+    color:#ecc309;
+    border: 1px solid #ecc309
+}
+
+.footer-links {
+    margin-top: 20px;
+    color: #8C97AD;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #8C97AD;
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #B0B8C5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.footer-column ul li a:hover {
+    color: #ecc309;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f55f08;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #8C97AD;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Reestiliza o nav-categories para modo mobile */
+    .nav-categories {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #272626, black);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 70px;
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+    
+    .nav-categories a {
+        margin: 15px 25px;
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Quando o checkbox está marcado, mostra o menu */
+    .menu-toggle:checked ~ .nav-categories {
+        right: 0;
+    }
+    
+    /* Animação das linhas do hambúrguer quando ativo */
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        margin-left: 15px;
+        z-index: 80;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-illustration {
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .content-illustration img {
+        width: 100%;
+        margin-left: -20px;
+    }
+
+    .header-nav, .header-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Lista para eventos educacionais */
+.event-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.event-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.event-list li::before {
+    content: "•";
+    color: #64b5f6;
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+.type-projects .event-list li::before {
+    color: #ffb74d;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .event-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .event-date, .event:nth-child(even) .event-date {
+        width: 100%;
+        text-align: left;
+        padding: 0 0 0 70px;
+        margin-bottom: 1rem;
+        order: 1;
+    }
+
+    .event-date {
+        margin-top: 10px;
+    }
+    
+    .event-content {
+        width: calc(100% - 30px);
+        margin-left: 18px;
+    }
+    
+    .event:hover .event-dot {
+        transform: translateX(-50%) scale(1.5);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .event-content {
+        padding: 1.2rem;
+    }
+}
+
+
