@@ -164,6 +164,15 @@ body::before {
     transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
 }
 
+/* Gradient Divider */
+.gradient-divider {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ecc309, #f55f08);
+    margin: 0;
+    padding: 0;
+}
+
 .title-page {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -397,6 +406,15 @@ h1 {
 .event.type-projects .tag:hover {
     background-color: #ffb74d;
     color: white;
+}
+
+/* Gradient Divider */
+.gradient-divider {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ecc309, #f55f08);
+    margin: 0;
+    padding: 0;
 }
 
 /* Updated Footer Styles */
