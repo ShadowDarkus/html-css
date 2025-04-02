@@ -333,10 +333,10 @@ body {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    border: none;
+    border: 1px solid #7971ea;
     border-radius: 50px;
-    background: linear-gradient(45deg, #ff6b6b, #7971ea);
-    color: #272626;
+    background-color: transparent;
+    color: #7971ea;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
