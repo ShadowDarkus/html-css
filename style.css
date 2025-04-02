@@ -185,25 +185,27 @@ body {
 /*Referente ao botao de "entre em contato"*/
 .cta-button {
     display: inline-block;
-    background-color: #ffffff;
-    color: #272626;
-    margin-bottom: 30px;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative; /* Adicionar posição relativa */
+    padding: 1rem 2rem;
+    border: 1px solid #7971ea;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #7971ea;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(121, 113, 234, 0.4);
+    z-index: 1;
 }
 
 /*Referente ao hover do botao*/
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(231, 189, 3, 0.1);
-    color: #ecc309;
-    background-color: #000;
+    box-shadow: 0 5px 15px rgba(121, 113, 234, 0.4);
+    background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
-    border: 1px solid #ecc309; /* Corrigido: vírgulas removidas */
 }
 
 .content-illustration {
