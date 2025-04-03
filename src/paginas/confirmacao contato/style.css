@@ -4,10 +4,13 @@
     src: url('/html-css/src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
 }
 
-/*Aqui vc coloca a interligação da fonte ao seu site*/
-@font-face {   
-    font-family: 'Backso'; 
-    src: url('/html-css/src/fonts/Backso.otf') format('opentype'), url('/html-css/src/fonts/Backso.ttf') format('truetype'); 
+:root {
+    --primary: #6b5ce7;
+    --secondary: #ff7675;
+    --light: #ffeaa7;
+    --dark: #2d3436;
+    --text: #636e72;
+    --white: #ffffff;
 }
 
 * {
@@ -18,49 +21,37 @@
 }
 
 body {
-    background-color: #121212;
-    color: #fff;
+    background: linear-gradient(135deg, #2d3436 0%, #6b5ce7 100%);
     min-height: 100vh;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    overflow-x: hidden;
 }
 
-/* Padrão geométrico de fundo */
-.background-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: linear-gradient(to right, #272626, black);
-}
-
-/* Container principal */
-.success-container {
+.container {
     width: 90%;
-    max-width: 1000px;
-    perspective: 1000px;
-    margin: 2rem;
+    max-width: 600px;
+    padding: 20px;
     position: relative;
 }
 
-/* Card principal com animação 3D */
 .card {
-    background-color: transparent;
-    border-radius: 12px;
+    background-color: #1c1c1c;
+    border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
     transform-style: preserve-3d;
-    animation: cardEntrance 1.2s ease-out forwards;
+    perspective: 1000px;
+    animation: cardAppear 1.2s ease forwards;
 }
 
-@keyframes cardEntrance {
+@keyframes cardAppear {
     0% {
         opacity: 0;
-        transform: translateY(50px) rotateX(-10deg);
+        transform: translateY(50px) rotateX(-15deg);
     }
     100% {
         opacity: 1;
@@ -68,281 +59,244 @@ body {
     }
 }
 
-/* Container para o conteúdo */
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-/* Conteúdo principal */
-.main-content {
-    padding: 3rem 2rem;
+.card-header {
+    background-color: #6b5ce7;
+    padding: 30px 0;
     text-align: center;
     position: relative;
-    z-index: 1;
-    width: 100%;
+    overflow: hidden;
 }
 
-/* Efeito de linha superior */
-.main-content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: #ff8207;
-    animation: slideLine 1s ease-in-out infinite;
-}
-
-/* Linha inferior */
-.main-content .bottom-line {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: #ff8207;
-    animation: slideLineBottom 1s ease-in-out infinite;
-    animation-delay: 1.5s; /* Atraso para efeito em cascata */
-}
-
-/* Efeito de linha lateral esquerda */
-.main-content::after {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: #ff8207;
-    animation: slideLineVerticalLeft 1s ease-in-out infinite;
-    animation-delay: 0.5s; /* Pequeno atraso para melhor efeito visual */
-}
-
-/* Linha lateral direita */
-.main-content .right-line {
-    content: "";
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: #ff8207;
-    animation: slideLineVerticalRight 1s ease-in-out infinite;
-    animation-delay: 1s; /* Atraso para efeito em cascata */
-}
-
-/* Adicionando linhas laterais direita e inferior com pseudo-elementos */
-.main-content {
+.card-header h1 {
+    color: #fff;
+    font-size: 1.8rem;
     position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+    animation: slideInDown 0.8s ease 0.4s backwards;
 }
 
-/* Animações para as linhas */
-@keyframes slideLine {
-    0% { left: -100%; }
-    50% { left: 100%; }
-    100% { left: 100%; }
-}
-
-@keyframes slideLineVerticalLeft {
-    0% { top: 100%; }
-    50% { top: -100%; }                            
-    100% { top: -100%; }
-}
-
-@keyframes slideLineVerticalRight {
-    0% { top: -100%; }
-    50% { top: 100%; }
-    100% { top: 100%; }
-}
-
-@keyframes slideLineBottom {
-    0% { right: -100%; }
-    50% { right: 100%; }
-    100% { right: 100%; }
-}
-
-/* Ícone de sucesso estilizado */
-.success-icon-container {
-    margin-bottom: 2.5rem;
-    position: relative;
-}
-
-.envelope {
-    width: 120px;
-    height: 80px;
-    background-color: #ff8207;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-    animation: floatEnvelope 3s ease-in-out infinite;
-}
-
-@keyframes floatEnvelope {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-.envelope::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 50px solid #ff8207;
-    transform-origin: top;
-    transform: rotate(180deg) translateY(-50px);
-    z-index: -1;
-}
-
-.envelope::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Etiquetas em formato de tag para o título */
-.tag-container {
-    margin-bottom: 2rem;
-    perspective: 400px;
-} 
-
-.tag {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    margin: 0.3rem;
-    background-color: #ff8207;
-    color: #000;
-    font-weight: 600;
-    font-size: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    animation: tagSwing 2s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.1s);
-    opacity: 0;
-    transform-origin: center;
-}
-
-@keyframes tagSwing {
+@keyframes slideInDown {
     0% {
         opacity: 0;
-        transform: rotateX(-90deg);
-    }
-    70% {
-        transform: rotateX(20deg);
+        transform: translateY(-30px);
     }
     100% {
         opacity: 1;
-        transform: rotateX(0deg);
+        transform: translateY(0);
     }
 }
 
-/* Mensagem de agradecimento */
-.message {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-    color: #e0e0e0;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding: 0 1rem;
-    animation: fadeIn 1s ease-out 0.8s forwards;
-    opacity: 0;
+    z-index: 2;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        transform: scale(1);
+    }
+}
+
+.success-icon svg {
+    width: 50px;
+    height: 50px;
+    fill: #6b5ce7;
+    animation: bounceIn 0.6s ease 0.8s backwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-body {
+    padding: 40px 30px;
+    position: relative;
+}
+
+
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(400px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease 1s backwards;
+}
+
+.message p {
+    color: #c2bdbd;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.details-box {
+    background-color: rgba(107, 92, 231, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid #6b5ce7;
+    animation: slideInLeft 0.8s ease 1.3s backwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.details-box h3 {
+    color: #6b5ce7;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.details-item {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.details-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6b5ce7;
+    border-radius: 50%;
+}
+
+.details-item .icon svg {
+    width: 12px;
+    height: 12px;
+    fill: #fff;
+}
+
+.details-item p {
+    color: #b8c4c9;
+    font-size: 0.95rem;
+}
+
+.details-item strong {
+    color: #b8c4c9;
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    animation: fadeIn 0.8s ease 1.6s backwards;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-/* Botão com efeito de hover */
-.button-container {
-    margin-top: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.return-button {
-    position: relative;
+.btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: transparent;
-    color: #ff8207;
-    font-weight: 600;
-    font-size: 1.1rem;
+    padding: 1rem 2rem;
     text-decoration: none;
-    border: 2px solid #ff8207;
+    border: 1px solid #7971ea;
     border-radius: 50px;
+    background-color: transparent;
+    color: #7971ea;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
     overflow: hidden;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(121, 113, 234, 0.4);
     z-index: 1;
 }
 
-.return-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #ff8207;
-    transition: all 0.4s;
-    z-index: -1;
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(121, 113, 234, 0.6);
 }
 
-.return-button:hover {
-    color: #000;
-}
-
-.return-button:hover::before {
-    left: 0;
-}
-
-/* Responsividade */
+/* Responsive styles */
 @media (max-width: 768px) {
-    .success-container {
-        width: 95%;
+    .card-header h1 {
+        font-size: 1.5rem;
     }
     
-    .envelope {
-        width: 100px;
-        height: 70px;
+    .success-icon {
+        width: 80px;
+        height: 80px;
     }
     
-    .envelope::before {
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-top: 40px solid #ff8207;
-        transform: rotate(180deg) translateY(-40px);
+    .success-icon svg {
+        width: 40px;
+        height: 40px;
     }
     
-    .tag {
-        font-size: 1.2rem;
-        padding: 0.6rem 1.2rem;
-    }
-    
-    .message {
+    .message p {
         font-size: 1rem;
     }
     
-    .return-button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
