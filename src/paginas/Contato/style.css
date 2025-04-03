@@ -1,13 +1,4 @@
 
-:root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #7971ea;
-    --dark-color: #2d3436;
-    --light-color: #f9f9f9;
-    --success-color: #00b894;
-    --error-color: #d63031;
-}
-
 * {
     margin: 0;
     padding: 0;
