@@ -3,13 +3,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Feelin;
+}
+
+@font-face {
+    font-family: 'Feelin';
+    src: url('/html-css/src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
+}
+
+/*Aqui vc coloca a interligação da fonte ao seu site*/
+@font-face {   
+    font-family: 'Backso'; 
+    src: url('/html-css/src/fonts/Backso.otf') format('opentype'), url('/html-css/src/fonts/Backso.ttf') format('truetype'); 
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #272626, #000);
 }
 
 /* Container principal */
@@ -19,9 +31,144 @@ body {
     padding: 0 20px;
 }
 
+/* Header Styles */
+.header {
+    background-image: linear-gradient(to right, #272626, black);
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: relative; /* Adicionado para posicionamento do botão hambúrguer */
+}
+
+.logo {
+    text-align: center;
+    background-color: #ecc309;
+    color: #272626;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-right: 0;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 30px;
+    font-family: Backso;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    font-size: 16px;
+    font-family: Backso;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.header-content nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-content-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo para o botão hambúrguer e menu mobile */
+.menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.hamburger-btn {
+    display: none; /* Por padrão o botão fica escondido */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Categories */
+.nav-categories {
+    background-image: linear-gradient(to right, #272626);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 5%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-categories a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-family: Backso;   
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-categories a:hover {
+    opacity: 1;
+    color: #ecc309; /*cor do link quando o mouse passa por cima.*/
+    transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
+}
+
+/* Gradient Divider */
+.gradient-divider {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, #03dac6, #7818ee);
+    margin: 0;
+    padding: 0;
+}
+
 /* Header e perfil */
-header {
-    background: linear-gradient(135deg, #4a6bff, #2541b2);
+.hero {
+    background: linear-gradient(135deg, #272626, #2541b2);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -76,13 +223,17 @@ header {
     text-decoration: none;
     font-size: 1rem;
     transition: opacity 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.767);
     padding: 8px 16px;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     opacity: 0.8;
+    color: #4a6bff;
+    background-color: #272626;
+    transform: translateY(-3px);
 }
 
 /* Seções gerais */
@@ -94,7 +245,7 @@ section {
     font-size: 1.8rem;
     margin-bottom: 30px;
     position: relative;
-    color: #2541b2;
+    color: #fff;
 }
 
 .section-title:after {
@@ -102,9 +253,9 @@ section {
     position: absolute;
     left: 0;
     bottom: -10px;
-    width: 50px;
+    width: 80px;
     height: 3px;
-    background-color: #4a6bff;
+    background: linear-gradient(to right, #ecc309, #d63031);
 }
 
 /* Seção Sobre Mim */
@@ -121,13 +272,18 @@ section {
 .about-item h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
-    color: #2541b2;
+    color: #4a6bff;
+}
+
+.about-item p {
+    color: #c2bdbd;
 }
 
 .about-text {
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 20px;
+    color: #c2bdbd;
 }
 
 /* Habilidades */
@@ -182,7 +338,7 @@ section {
     font-size: 1.5rem;
     margin-bottom: 30px;
     text-align: center;
-    color: #2541b2;
+    color: #4a6bff;
 }
 
 .resume-grid {
@@ -272,26 +428,255 @@ section {
     line-height: 1.6;
 }
 
-/* Footer */
+/* Updated Footer Styles */
 footer {
-    background-color: #2541b2;
+    background-image: linear-gradient(to right, #272626, #000);
     color: white;
-    padding: 30px 0;
-    text-align: center;
+    padding: 60px 0 30px;
+    width: 100%;
 }
 
 .footer-content {
-    max-width: 600px;
+    max-width: 1500px;
     margin: 0 auto;
+    padding: 0 5%;
 }
 
-.footer-title {
-    font-size: 1.4rem;
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-column p {
+    font-size: 1.1rem;
+    color: #B0B8C5;
     margin-bottom: 20px;
 }
 
-.contact-item {
-    margin-bottom: 10px;
+.fa-square-facebook {
+    color: rgb(13, 72, 236);
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: rgb(164, 11, 211);
+    font-size: 20px;
+}
+
+.fa-tiktok {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+
+.fa-square-x-twitter {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fa-square-whatsapp {
+    color: green;
+    font-size: 20px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    width: 100%;
+    background-color: #ecc309;
+    color: #272626;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #000;
+    color:#ecc309;
+    border: 1px solid #ecc309
+}
+
+.footer-links {
+    margin-top: 20px;
+    color: #8C97AD;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #8C97AD;
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #B0B8C5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.footer-column ul li a:hover {
+    color: #ecc309;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f55f08;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #8C97AD;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Reestiliza o nav-categories para modo mobile */
+    .nav-categories {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #272626, black);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 70px;
+        transition: right 0.3s ease;
+        z-index: 90;
+    }
+    
+    .nav-categories a {
+        margin: 15px 25px;
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Quando o checkbox está marcado, mostra o menu */
+    .menu-toggle:checked ~ .nav-categories {
+        right: 0;
+    }
+    
+    /* Animação das linhas do hambúrguer quando ativo */
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-bottom: 40px;
+        margin-left: 15px;
+        z-index: 80;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-illustration {
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .content-illustration img {
+        width: 100%;
+        margin-left: -20px;
+    }
+
+    .header-nav, .header-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
 
 /* Responsividade */

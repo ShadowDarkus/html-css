@@ -189,6 +189,7 @@ body {
     border: 1px solid #7971ea;
     border-radius: 50px;
     background-color: transparent;
+    text-decoration: none;
     color: #7971ea;
     font-size: 1rem;
     font-weight: 600;
@@ -202,10 +203,8 @@ body {
 
 /*Referente ao hover do botao*/
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(121, 113, 234, 0.4);
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(121, 113, 234, 0.6);
 }
 
 .content-illustration {

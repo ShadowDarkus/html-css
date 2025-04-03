@@ -1,230 +1,346 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Yago Padrão | Desenvolvedor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <header>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="name">Yago Padrão</div>
+                <div class="tagline">Developer Web</div>
+            </div>
+
+            <!-- Botão hamburguer e checkbox para controle do menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+
+            <nav class="nav-categories">
+                <a href="/html-css/index.html">INÍCIO</a>
+                <a href="./src/paginas/Novidades/index.html">NOVIDADES</a>
+                <a href="./src/paginas/Sobre/index.html">SOBRE</a>
+                <a href="./src/paginas/Portifolio/index.html">PORTIFÓLIO</a>
+                <a href="./src/paginas/Contato/index.html">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="gradient-divider"></div>
+
+    <section class="hero">
         <div class="container">
             <div class="profile-header">
                 <div class="profile-pic">
-                    <img src="/api/placeholder/400/400" alt="Yago Padrão">
+                    <img src="/html-css/src/img/img3.jpg" alt="Yago Padrão">
                 </div>
                 <h1 class="profile-name">Yago Padrão Casatle Giusti Auras</h1>
                 <h2 class="profile-title">Estudante de Ciência da Computação | Desenvolvedor Web</h2>
                 <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Email</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-grid">
-                <div>
-                    <p class="about-text">
-                        Olá! Sou Yago Padrão, tenho 21 anos e estou cursando Ciência da Computação na Universidade Veiga de Almeida (UVA). Sou um entusiasta da tecnologia, nascido e criado no Rio de Janeiro, Brasil.
-                    </p>
-                    <p class="about-text">
-                        Minha paixão pela tecnologia começou cedo e foi essa motivação que me levou a escolher o curso de Ciência da Computação. Acredito que a tecnologia tem o poder de transformar o mundo e quero fazer parte dessa transformação.
-                    </p>
-                    <p class="about-text">
-                        Cursei o ensino médio no colégio Pensi (da Tijuca 2) na área militar, mas sempre tive interesse em seguir a carreira técnica. Atualmente, além da graduação, realizo cursos extracurriculares para aprimorar meus conhecimentos na área de desenvolvimento web, tendo adquirido habilidades avançadas em HTML e CSS.
-                    </p>
-                    <p class="about-text">
-                        Estou constantemente buscando expandir meus conhecimentos e habilidades, seja através de cursos online, projetos pessoais ou participação em eventos da área. Meu objetivo é me tornar um desenvolvedor completo, capaz de criar soluções inovadoras e eficientes.
-                    </p>
-                </div>
-                <div>
-                    <div class="about-item">
-                        <h3>Data de Nascimento</h3>
-                        <p>2003</p>
-                    </div>
-                    <div class="about-item">
-                        <h3>Idade</h3>
-                        <p>21 anos</p>
-                    </div>
-                    <div class="about-item">
-                        <h3>Localização</h3>
-                        <p>Rio de Janeiro, Brasil</p>
-                    </div>
-                    <div class="about-item">
-                        <h3>Formação</h3>
-                        <p>Estudante de Ciência da Computação - UVA</p>
-                    </div>
-                    <div class="about-item">
-                        <h3>Interesses</h3>
-                        <p>Desenvolvimento Web, Programação, Novas Tecnologias</p>
-                    </div>
-                    <div class="about-item">
-                        <h3>Idiomas</h3>
-                        <p>Português (Nativo), Inglês (Intermediário)</p>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="section-title" style="margin-top: 50px;">Minhas Habilidades</h3>
-            <div class="skill-grid">
-                <div class="skill-item">
-                    <div class="skill-name">HTML</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">CSS</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">JavaScript</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">Python</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">Java</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 65%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">Git</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">UI/UX</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">Banco de Dados</div>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 50%;"></div>
-                    </div>
+                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/" target="_blank">GitHub</a>
+                    <a href="https://outlook.office.com/mail/" target="_blank">Email</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="resume">
-        <div class="container">
-            <h2 class="section-title">Currículo Profissional</h2>
-            
-            <div class="resume-section">
-                <h3 class="resume-title">Experiência & Educação</h3>
-                
-                <div class="resume-grid">
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-grid">
                     <div>
-                        <div class="resume-block">
-                            <h4 class="resume-block-title">Experiência Profissional</h4>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Estágio em Desenvolvimento Web</h5>
-                                <p class="resume-item-subtitle">TechSolutions Rio</p>
-                                <p class="resume-item-date">Jan 2024 - Presente</p>
-                                <p class="resume-item-text">
-                                    Desenvolvimento de interfaces web responsivas utilizando HTML, CSS e JavaScript. Participação em projetos de criação de landing pages e sistemas internos.
-                                </p>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Monitor de Programação</h5>
-                                <p class="resume-item-subtitle">Universidade Veiga de Almeida</p>
-                                <p class="resume-item-date">Ago 2023 - Dez 2023</p>
-                                <p class="resume-item-text">
-                                    Auxílio a alunos da disciplina de Introdução à Programação, realizando plantões de dúvidas e acompanhamento de projetos práticos.
-                                </p>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Freelancer - Desenvolvimento Web</h5>
-                                <p class="resume-item-subtitle">Autônomo</p>
-                                <p class="resume-item-date">2022 - 2023</p>
-                                <p class="resume-item-text">
-                                    Criação de websites para pequenos negócios locais, com foco em design responsivo e otimização para mecanismos de busca.
-                                </p>
-                            </div>
+                        <p class="about-text">
+                            Olá! Sou Yago Padrão, tenho 21 anos e estou cursando Ciência da Computação na Universidade
+                            Veiga
+                            de Almeida (UVA). Sou um entusiasta da tecnologia, nascido e criado no Rio de Janeiro,
+                            Brasil.
+                        </p>
+                        <p class="about-text">
+                            Minha paixão pela tecnologia começou cedo e foi essa motivação que me levou a escolher o
+                            curso
+                            de Ciência da Computação. Acredito que a tecnologia tem o poder de transformar o mundo e
+                            quero
+                            fazer parte dessa transformação.
+                        </p>
+                        <p class="about-text">
+                            Cursei o ensino médio no colégio Pensi (da Tijuca 2) na área militar, mas sempre tive
+                            interesse
+                            em seguir a carreira técnica. Atualmente, além da graduação, realizo cursos
+                            extracurriculares
+                            para aprimorar meus conhecimentos na área de desenvolvimento web, tendo adquirido
+                            habilidades
+                            avançadas em HTML e CSS.
+                        </p>
+                        <p class="about-text">
+                            Estou constantemente buscando expandir meus conhecimentos e habilidades, seja através de
+                            cursos
+                            online, projetos pessoais ou participação em eventos da área. Meu objetivo é me tornar um
+                            desenvolvedor completo, capaz de criar soluções inovadoras e eficientes.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="about-item">
+                            <h3>Data de Nascimento</h3>
+                            <p>2003</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Idade</h3>
+                            <p>21 anos</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Localização</h3>
+                            <p>Rio de Janeiro, Brasil</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Formação</h3>
+                            <p>Estudante de Ciência da Computação - UVA</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Interesses</h3>
+                            <p>Desenvolvimento Web, Programação, Novas Tecnologias</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Idiomas</h3>
+                            <p>Português (Nativo), Inglês (Intermediário)</p>
                         </div>
                     </div>
-                    
-                    <div>
-                        <div class="resume-block">
-                            <h4 class="resume-block-title">Formação Acadêmica</h4>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Bacharelado em Ciência da Computação</h5>
-                                <p class="resume-item-subtitle">Universidade Veiga de Almeida (UVA)</p>
-                                <p class="resume-item-date">2022 - Presente</p>
-                                <p class="resume-item-text">
-                                    Cursando o 6º período. Participação em grupos de estudo de desenvolvimento web e projetos de extensão.
-                                </p>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Ensino Médio</h5>
-                                <p class="resume-item-subtitle">Colégio Pensi (Tijuca 2) - Área Militar</p>
-                                <p class="resume-item-date">2019 - 2021</p>
-                                <p class="resume-item-text">
-                                    Formação com ênfase em disciplina e exatas, proporcionando boa base para ingresso no ensino superior.
-                                </p>
+                </div>
+
+                <h3 class="section-title" style="margin-top: 50px;">Minhas Habilidades</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Java</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Git</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">UI/UX</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Banco de Dados</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <div class="container">
+                <h2 class="section-title">Currículo Profissional</h2>
+
+                <div class="resume-section">
+                    <h3 class="resume-title">Experiência & Educação</h3>
+
+                    <div class="resume-grid">
+                        <div>
+                            <div class="resume-block">
+                                <h4 class="resume-block-title">Experiência Profissional</h4>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Estágio em Desenvolvimento Web</h5>
+                                    <p class="resume-item-subtitle">TechSolutions Rio</p>
+                                    <p class="resume-item-date">Jan 2024 - Presente</p>
+                                    <p class="resume-item-text">
+                                        Desenvolvimento de interfaces web responsivas utilizando HTML, CSS e JavaScript.
+                                        Participação em projetos de criação de landing pages e sistemas internos.
+                                    </p>
+                                </div>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Desenvolvedor Web Júnior</h5>
+                                    <p class="resume-item-subtitle">DataSolutions Brasil</p>
+                                    <p class="resume-item-date">Março 2023 - Dezembro 2023</p>
+                                    <p class="resume-item-text">Participação na implementação de novos componentes para
+                                        o sistema interno da
+                                        empresa. Colaboração com a equipe de UX/UI na otimização da experiência do
+                                        usuário.
+                                    </p>
+                                </div>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Freelancer - Desenvolvimento Web</h5>
+                                    <p class="resume-item-subtitle">Autônomo</p>
+                                    <p class="resume-item-date">2022 - 2023</p>
+                                    <p class="resume-item-text">
+                                        Criação de websites para pequenos negócios locais, com foco em design responsivo
+                                        e
+                                        otimização para mecanismos de busca.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="resume-block">
-                            <h4 class="resume-block-title">Cursos Complementares</h4>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Desenvolvimento Web Completo</h5>
-                                <p class="resume-item-subtitle">Udemy</p>
-                                <p class="resume-item-date">2023</p>
+
+                        <div>
+                            <div class="resume-block">
+                                <h4 class="resume-block-title">Formação Acadêmica</h4>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Bacharelado em Ciência da Computação</h5>
+                                    <p class="resume-item-subtitle">Universidade Veiga de Almeida (UVA)</p>
+                                    <p class="resume-item-date">2025 - Presente</p>
+                                    <p class="resume-item-text">
+                                        Cursando o 1º período. Participação em grupos de estudo de desenvolvimento web e
+                                        projetos de extensão.
+                                    </p>
+                                </div>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Ensino Médio</h5>
+                                    <p class="resume-item-subtitle">Colégio Pensi (Tijuca 2) - Área Militar</p>
+                                    <p class="resume-item-date">2019 - 2021</p>
+                                    <p class="resume-item-text">
+                                        Formação com ênfase em disciplina e exatas, proporcionando boa base para
+                                        ingresso no
+                                        ensino superior.
+                                    </p>
+                                </div>
                             </div>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Fundamentos de Python</h5>
-                                <p class="resume-item-subtitle">Alura</p>
-                                <p class="resume-item-date">2022</p>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <h5 class="resume-item-title">Git e GitHub</h5>
-                                <p class="resume-item-subtitle">Digital Innovation One</p>
-                                <p class="resume-item-date">2022</p>
+
+                            <div class="resume-block">
+                                <h4 class="resume-block-title">Cursos Complementares</h4>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Desenvolvimento Web Completo</h5>
+                                    <p class="resume-item-subtitle">OneBitCode</p>
+                                    <p class="resume-item-date">2024 - 2025</p>
+                                </div>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Fundamentos de Python</h5>
+                                    <p class="resume-item-subtitle">Alura</p>
+                                    <p class="resume-item-date">2022</p>
+                                </div>
+
+                                <div class="resume-item">
+                                    <h5 class="resume-item-title">Git e GitHub</h5>
+                                    <p class="resume-item-subtitle">Trybe</p>
+                                    <p class="resume-item-date">2023</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3 class="footer-title">Entre em Contato</h3>
-                <div class="contact-item">Email: yago.padrao@exemplo.com</div>
-                <div class="contact-item">Telefone: (21) 98765-4321</div>
-                <div class="contact-item">Rio de Janeiro, Brasil</div>
-                <p style="margin-top: 20px;">&copy; 2025 Yago Padrão Casatle Giusti Auras. Todos os direitos reservados.</p>
+        <div class="gradient-divider"></div>
+
+        <footer>
+            <div class="container footer-content">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p>
+                            Inscreva-se para receber as últimas notícias e recursos úteis diretamente no seu e-mail.
+                            Aguardamos você lá, até mais 😎👍
+                        </p>
+                        <form class="newsletter-form" action="../newsletter/index.html">
+                            <input type="text" placeholder="Seu nome" required />
+                            <input type="email" placeholder="Seu e-mail" required />
+                            <button type="submit">Inscreva-se</button>
+                        </form>
+
+                        <div class="footer-links">
+                            <p>Rio de Janeiro // RJ</p>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="/html-css/index.html">Início</a></li>
+                            <li><a href="../Novidades/index.html">Novidades</a></li>
+                            <li><a href="./index.html">Sobre</a></li>
+                            <li><a href="../Portifolio/index.html">Portifólio</a></li>
+                            <li><a href="../Contato/index.html">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Seção de Redes Sociais (modificada) -->
+                    <div class="footer-column">
+                        <h4>Redes Sociais</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fa-brands fa-square-facebook"></i> Facebook</a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i>
+                                    Instagram</a></li>
+                            <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+                                    Tiktok</a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i>
+                                    Youtube</a></li>
+                            <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i>
+                                    X</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Seção de Entre em Contato (modificada) -->
+                    <div class="footer-column">
+                        <h4>Entre em Contato</h4>
+                        <ul>
+                            <li><a href="https://outlook.office.com/mail/" target="_blank">📩 E-mail:
+                                    15773899728@veigadealmeida.edu.br</a></li>
+                            <li><a href="https://contate.me/5521979445237" target="_blank"><i
+                                        class="fa-brands fa-square-whatsapp"></i> WhatsApp: +55(21)97944-5237</a></li>
+                            <li><a href="../Contato/index.html">Formulário</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Yago Padrão. Todos os direitos reservados.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 </body>
+
 </html>
