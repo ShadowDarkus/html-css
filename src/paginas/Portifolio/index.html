@@ -1,21 +1,229 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - My Website</title> <!--Esse é o título da página.-->
-     <link rel="stylesheet" href="style.css">
+    <title>Portifólio-My Website</wbr></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div>
-        <a href="/html-css/index.html">Início</a> |
-        <!--Usei URL's relativas aqui, pois os arquivos das paginas estão dentro da mesma pasta, não foi necessário usar URL absolutas.-->
-        <a href="../Novidades/index.html">Novidades</a> |
-        <a href="./index.html">Portifólios</a> |
-        <a href="../Sobre/index.html">Sobre</a> |
-        <a href="../Contato/index.html">Contato</a> |
-    </div>
 
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="name">Yago Padrão</div>
+                <div class="tagline">Developer Web</div>
+            </div>
+
+            <!-- Botão hamburguer e checkbox para controle do menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+
+            <nav class="nav-categories">
+                <a href="/html-css/index.html">INÍCIO</a>
+                <a href="../Novidades/index.html">NOVIDADES</a>
+                <a href="../Sobre/index.html">SOBRE</a>
+                <a href="./index.html">PORTIFÓLIO</a>
+                <a href="../Contato/index.html">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Portifólio e Projetos</h1>
+            <p>Conheça os projetos que estou desenvolvendo, suas características, objetivos e estágio atual de
+                desenvolvimento.</p>
+        </div>
+    </section>
+
+
+    <section class="project-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Em produção:</h2>
+                <p>Cada projeto representa uma exploração de diferentes tecnologias e designs, buscando criar
+                    experiências únicas e funcionais para os usuários.</p>
+            </div>
+
+            <div class="project-grid">
+                <div id="tecnologia" class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-tech">TechNova</div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Tecnologias Inovadoras 2025</h2>
+                        <p>Um portal dedicado a explorar as tecnologias revolucionárias que estão moldando nosso futuro,
+                            oferecendo informações detalhadas e análises sobre as inovações mais recentes.</p>
+                        <div>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Responsivo</span>
+                            <span class="tag">Animações</span>
+                        </div>
+                        <a href="./projetos do portifolio/tecnologia.html"  target="_blank"  class="project-link">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <div id="anime" class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-anime">MundoAnime</div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Mundo Anime</h2>
+                        <p>Plataforma dedicada aos fãs de anime, oferecendo conteúdo curado, análises de lançamentos,
+                            perfis de personagens e informações sobre as últimas tendências no mundo dos animes.</p>
+                        <div>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Gradientes</span>
+                        </div>
+                        <a href="./projetos do portifolio/anime.html" target="_blank"  class="project-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div id="sobre" class="section-title">
+                <h2>Sobre os Projetos:</h2>
+                <p>Conheça mais a fundo os objetivos, inspirações e processo de desenvolvimento de cada projeto.</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">💡</div>
+                    <h3>Projeto TechNova</h3>
+                    <p>O projeto TechNova nasceu da necessidade de criar um espaço dedicado à divulgação e explicação de
+                        tecnologias emergentes de maneira clara e acessível. Em um mundo em constante evolução
+                        tecnológica, muitas pessoas se sentem perdidas ou intimidadas pela quantidade de inovações.</p>
+                    <p>Nosso objetivo é desmistificar as novas tecnologias, explicando suas aplicações práticas e como
+                        elas podem transformar positivamente nossa sociedade. O site aborda temas como inteligência
+                        artificial, computação quântica, realidade aumentada, mobilidade autônoma, entre outros.</p>
+                    <p>Estamos trabalhando para implementar recursos interativos que permitam ao usuário explorar essas
+                        tecnologias de forma mais imersiva, além de criar uma comunidade onde entusiastas possam trocar
+                        experiências e conhecimentos.</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">🎭</div>
+                    <h3>Projeto MundoAnime</h3>
+                    <p>O MundoAnime surgiu da paixão pela cultura dos animes e a percepção de que faltava uma plataforma
+                        brasileira que unisse informação de qualidade, análises profundas e um design moderno e atraente
+                        para os fãs desse universo.</p>
+                    <p>Nosso principal objetivo é criar um hub completo onde novos e experientes fãs de anime possam
+                        descobrir séries que combinem com seus gostos, acompanhar lançamentos, entender referências
+                        culturais, e se aprofundar nos aspectos técnicos e artísticos das animações japonesas.</p>
+                    <p>Estamos desenvolvendo funcionalidades como um sistema de recomendação personalizado baseado nas
+                        preferências do usuário, ficha técnica detalhada das obras, e um fórum para discussões e trocas
+                        de impressões sobre episódios e temporadas.</p>
+                </div>
+            </div>
+
+            <div class="status-container">
+                <div class="status-block">
+                    <h3>TechNova</h3>
+                    <p>Status: Em Desenvolvimento</p>
+                    <div class="status-progress">
+                        <div class="progress-bar tech-progress"></div>
+                    </div>
+                    <p>55% Concluído</p>
+                    <p>Próximas implementações: Seção de artigos detalhados, sistema de comentários e integração com
+                        redes sociais.</p>
+                </div>
+
+                <div class="status-block">
+                    <h3>MundoAnime</h3>
+                    <p>Status: Em Desenvolvimento</p>
+                    <div class="status-progress">
+                        <div class="progress-bar anime-progress"></div>
+                    </div>
+                    <p>65% Concluído</p>
+                    <p>Próximas implementações: Calendário de lançamentos, perfis de estúdios de animação e sistema de
+                        avaliação de episódios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Inscreva-se para receber as últimas notícias e recursos úteis diretamente no seu e-mail.
+                        Aguardamos você lá, até mais 😎👍
+                    </p>
+                    <form class="newsletter-form" action="../newsletter/index.html">
+                        <input type="text" placeholder="Seu nome" required />
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <button type="submit">Inscreva-se</button>
+                    </form>
+
+                    <div class="footer-links">
+                        <p>Rio de Janeiro // RJ</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="/html-css/index.html">Início</a></li>
+                        <li><a href="../Novidades/index.html">Novidades</a></li>
+                        <li><a href="../Sobre/index.html">Sobre</a></li>
+                        <li><a href="./index.html">Portifólio</a></li>
+                        <li><a href="../Contato/index.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Redes Sociais (modificada) -->
+                <div class="footer-column">
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+                                Tiktok</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i>
+                                Youtube</a></li>
+                        <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i> X</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Seção de Entre em Contato (modificada) -->
+                <div class="footer-column">
+                    <h4>Entre em Contato</h4>
+                    <ul>
+                        <li><a href="https://outlook.office.com/mail/" target="_blank">📩 E-mail:
+                                15773899728@veigadealmeida.edu.br</a></li>
+                        <li><a href="https://contate.me/5521979445237" target="_blank"><i
+                                    class="fa-brands fa-square-whatsapp"></i> WhatsApp: +55(21)97944-5237</a></li>
+                        <li><a href="../Contato/index.html">Formulário</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Yago Padrão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
