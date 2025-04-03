@@ -130,7 +130,7 @@ body {
     src: url('./src/fonts/Feelin\ Teachy\ TTF.ttf') format('truetype');
 }
 
-/*Aqui vc coloca a interligação da fonte ao seu site*/
+
 @font-face {   
     font-family: 'Backso'; 
     src: url('./src/fonts/Backso.otf') format('opentype'), url('./src/fonts/Backso.ttf') format('truetype'); 
@@ -149,8 +149,8 @@ body {
 
 .nav-categories a:hover {
     opacity: 1;
-    color: #ecc309; /*cor do link quando o mouse passa por cima.*/
-    transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
+    color: #ecc309; 
+    transform: translateY(-4px); 
 }
 
 /* Main Content */
@@ -260,15 +260,15 @@ body {
 
 /* Habilidades section */
 .skills {
-    padding: 80px 0; /*Isso se refere ao preenchimento interno da coloracao do background da section que no caso é a cor: #f9f9f9.*/
-    background-image: linear-gradient(to right, #272626, #000);/*Isso é a cor de fundo da section.*/
+    padding: 80px 0; 
+    background-image: linear-gradient(to right, #272626, #000);
 }
 
 /*Isso se refere aos conteiners retangulares (brancos) que cobrem o texto interno (o conteudo um si)*/
 .skills-content {  
-    display: flex;  /*isso organiza os containers retangulares em colunas dispostos na posicao 3x3.*/
-    flex-wrap: wrap; /*Organiza os containers retangulares em suas posicoes.*/
-    justify-content: space-between; /* Coloca um espaço igualitario entre os containers retangulares.*/
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: space-between; 
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 5%;
@@ -276,32 +276,32 @@ body {
 
 /*Isso se refere ao box (como se fosse um container dentro de outro container) dentro dos containers retangulares*/
 .skill-box {
-    background-color: white; /*Cor dos containers retangulares*/
-    border-radius: 20px; /*formato da Borda do container retangular*/
-    padding: 30px; /*Preenchimento interno do container retangular*/
-    width: 30%; /*Largura do container retangular*/
-    margin-bottom: 40px; /*Se refere a mergem inferior (a baixo dos containers).*/
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.007); /*Isso se refere ao sombreamento do container retangular (atras do container/sensacao de destacamento 3D) (esse fica fixo o tempo todo).*/
-    transition: transform 0.3s, box-shadow 0.3s; /*Suaviza a transisao da movimentacao 3D do container retangular.*/
+    background-color: white; 
+    border-radius: 20px; 
+    padding: 30px; 
+    width: 30%; 
+    margin-bottom: 40px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.007);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /*Cria o efeito houver nos cards de habilidades.*/
 .skill-box:hover {
-    transform: translateY(-10px);/*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima*/
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.007); /*Cria uma sombra atras do container retangular quando o mouse passa em cima, (apenas aparece quando passado por cima o mouse).*/
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.007); 
 }
 
 /*Se refere aos icones dos boxs*/
 .skill-icon {
-    font-size: 2.5rem; /* Se refere ao tamanho de todos os icones de todos os cards.*/
-    margin-bottom: 20px; /*Margem inferior dos icones em relacao a distancia do texto em baixo.*/
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
 }
 
 /*Se refere ao titulo h2 dos boxs*/
 .skill-title {
-    font-size: 1.3rem; /*tamanho do titulo dos cards.*/
-    margin-bottom: 15px; /*margem inferior do titulo em relacao a distancia do texto em baixo.*/
-    color: #2c3e50; /*cor do titulo dos cards.*/
+    font-size: 1.3rem; 
+    margin-bottom: 15px;
+    color: #2c3e50; 
 }
 .skills .section-title {
     color: #ffff;
@@ -311,25 +311,25 @@ body {
 
 /*Texto <p> dentro das Boxs*/
 .skill-box p {
-    color: #777; /*Cor do texto paragrafo (em todos os cards).*/
+    color: #777; 
 }
 
 /* Responsive design for skills section */
 @media screen and (max-width: 992px) {
     .skill-box {
-        width: 45%; /* Duas colunas em tablets */
+        width: 45%; 
     }
 }
 
 @media screen and (max-width: 768px) {
     .skill-box {
-        width: 100%; /* Uma coluna em dispositivos móveis */
+        width: 100%; 
         margin-left: 0;
         margin-right: 0;
     }
     
     .skills-content {
-        justify-content: center; /* Centraliza os cards em dispositivos móveis */
+        justify-content: center; 
     }
 }
 
@@ -476,7 +476,7 @@ footer {
 }
 
 .footer-column ul li a i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-right: 8px; 
 }
 
 .footer-column ul li a:hover {
