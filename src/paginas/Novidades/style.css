@@ -52,7 +52,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    position: relative; /* Adicionado para posicionamento do botão hambúrguer */
+    position: relative; 
 }
 
 .logo {
@@ -108,7 +108,7 @@ body::before {
 }
 
 .hamburger-btn {
-    display: none; /* Por padrão o botão fica escondido */
+    display: none; 
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -134,7 +134,7 @@ body::before {
     background-image: linear-gradient(to right, #272626);
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Alinha os links à direita */
+    justify-content: flex-end; 
 }
 
 .nav-content {
@@ -160,8 +160,8 @@ body::before {
 
 .nav-categories a:hover {
     opacity: 1;
-    color: #ecc309; /*cor do link quando o mouse passa por cima.*/
-    transform: translateY(-4px); /*faz leves e pequenos deslocamentos verticais de elementos de forma suave e eficiente para cima */
+    color: #ecc309; 
+    transform: translateY(-4px); 
 }
 
 /* Gradient Divider */
@@ -551,7 +551,7 @@ footer {
 }
 
 .footer-column ul li a i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-right: 8px; 
 }
 
 .footer-column ul li a:hover {

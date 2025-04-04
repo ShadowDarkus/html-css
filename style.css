@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    position: relative; /* Adicionado para posicionamento do botão hambúrguer */
+    position: relative; 
 }
 
 .logo {
@@ -82,11 +82,11 @@ body {
 
 /* Estilo para o botão hambúrguer e menu mobile */
 .menu-toggle {
-    display: none; /* Esconde o checkbox */
+    display: none; 
 }
 
 .hamburger-btn {
-    display: none; /* Por padrão o botão fica escondido */
+    display: none; 
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -112,7 +112,7 @@ body {
     background-image: linear-gradient(to right, #272626);
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Alinha os links à direita */
+    justify-content: flex-end; 
 }
 
 .nav-content {
