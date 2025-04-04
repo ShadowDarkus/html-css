@@ -219,45 +219,6 @@ body {
     margin-right: 80px;
 }
 
-/* Course Categories */
-.course-categories {
-    background-image: linear-gradient(to right, #272626, #000);
-    width: 100%;
-}
-
-.category-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 30px 5%;
-    text-align: center;
-}
-
-.course-categories h2 {
-    margin-bottom: 20px;
-    color: #FFFFFF;
-}
-
-.category-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.category-links a {
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #ecc309;
-    padding: 10px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.category-links a:hover {
-    background-color: #272626;
-    color: #FFFFFF;
-}
-
 /* Habilidades section */
 .skills {
     padding: 80px 0; 
