@@ -118,7 +118,6 @@ body {
 
 /* Navigation Categories */
 .nav-categories {
-    background-image: linear-gradient(to right, #272626);
     width: 100%;
     display: flex;
     justify-content: flex-end; /* Alinha os links à direita */
